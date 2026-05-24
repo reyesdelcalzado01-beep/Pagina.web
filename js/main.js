@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    
+  
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
     
@@ -7,7 +7,11 @@ document.addEventListener('DOMContentLoaded', function() {
         hamburger.addEventListener('click', function() {
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
-            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : 'auto';
+            if (navMenu.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'auto';
+            }
         });
         
         const navLinks = document.querySelectorAll('.nav-menu a');
@@ -19,8 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
-    
- 
+       
     const modal = document.getElementById('logoModal');
     const logoImg = document.querySelector('.logo-img');
     const closeBtn = document.querySelector('.close-modal');
@@ -55,8 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.style.overflow = 'auto';
         }
     });
-    
-
+     
     const animateOnScroll = function() {
         const elements = document.querySelectorAll('.feature-card, .producto-card, .galeria-item, .card, .value-item');
         
@@ -83,7 +85,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     initAnimations();
     window.addEventListener('scroll', animateOnScroll);
-    
     
     const contactForm = document.getElementById('contactForm');
     const formMensaje = document.getElementById('form-mensaje');
@@ -126,7 +127,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 5000);
         });
     }
-
     
     const productosContainer = document.getElementById('productos-container');
     

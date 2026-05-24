@@ -30,6 +30,7 @@ body {
     position: fixed;
     width: 100%;
     top: 0;
+    left: 0;
     z-index: 1000;
     box-shadow: var(--shadow);
 }
@@ -107,7 +108,7 @@ body {
 }
 
 .hamburger.active span:nth-child(2) {
-    opacity: 0;
+    opacity: 0; 
 }
 
 .hamburger.active span:nth-child(3) {
@@ -148,7 +149,7 @@ body {
 }
 
 .hero {
-    min-height: 100vh;
+    min-height: calc(100vh - 80px);
     height: auto;
     background: linear-gradient(rgba(10,47,68,0.75), rgba(10,47,68,0.75)), url('../img/Banner.png');
     background-size: cover;
@@ -159,8 +160,8 @@ body {
     justify-content: center;
     text-align: center;
     color: var(--white);
-    margin-top: 80px;
-    padding: 4rem 2rem;
+    margin-top: 80px; 
+    padding: 2rem;
 }
 
 .hero-content h1 {
@@ -200,7 +201,6 @@ body {
     padding: 4rem 2rem;
 }
 
-/* Footer */
 .footer {
     background: var(--primary);
     color: var(--white);
@@ -354,10 +354,10 @@ body {
     
     .nav-menu {
         position: fixed;
-        top: 80px;
+        top: 70px;
         left: -100%;
         width: 100%;
-        height: calc(100vh - 80px);
+        height: calc(100vh - 70px);
         background: linear-gradient(135deg, var(--primary) 0%, #0d3b55 100%);
         flex-direction: column;
         align-items: center;
@@ -365,20 +365,36 @@ body {
         gap: 2rem;
         transition: left 0.4s ease;
         z-index: 999;
+        margin: 0;
+        padding: 2rem;
     }
     
     .nav-menu.active {
         left: 0;
     }
     
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+    }
+    
     .nav-menu a {
         font-size: 1.5rem;
+        display: block;
+        padding: 0.5rem;
+    }
+    
+    .nav-menu a::after {
+        display: none;
     }
     
     .hero {
-        margin-top: 70px;
-        min-height: 80vh;
+        background: linear-gradient(rgba(10,47,68,0.75), rgba(10,47,68,0.75)), url('../img/Banner-movil.png');
+        background-size: cover;
+        background-position: center;
         background-attachment: scroll;
+        margin-top: 70px;
+        min-height: calc(100vh - 70px);
         padding: 2rem 1rem;
     }
     
@@ -396,11 +412,11 @@ body {
     }
     
     .logo h1 {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     
     .logo p {
-        font-size: 0.65rem;
+        font-size: 0.6rem;
     }
     
     .modal-content {
@@ -427,6 +443,10 @@ body {
 }
 
 @media (max-width: 480px) {
+    .hero {
+        min-height: calc(100vh - 70px);
+    }
+    
     .hero-content h1 {
         font-size: 1.5rem;
     }
@@ -440,11 +460,7 @@ body {
         font-size: 0.9rem;
     }
     
-    .welcome-section h2 {
-        font-size: 1.5rem;
-    }
-    
-    .welcome-section p {
-        font-size: 0.9rem;
+    .nav-menu a {
+        font-size: 1.2rem;
     }
 }
