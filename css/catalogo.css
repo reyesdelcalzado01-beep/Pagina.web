@@ -90,3 +90,26 @@
     color: var(--secondary);
     margin-right: 0.5rem;
 }
+
+@media (max-width: 768px) {
+    .catalogo-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .productos-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .producto-imagen {
+        height: 200px;
+    }
+    
+    .producto-info h3 {
+        font-size: 1.1rem;
+    }
+    
+    .producto-precio {
+        font-size: 1.2rem;
+    }
+}

@@ -1,5 +1,26 @@
 document.addEventListener('DOMContentLoaded', function() {
     
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : 'auto';
+        });
+        
+        const navLinks = document.querySelectorAll('.nav-menu a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
+    }
+    
+ 
     const modal = document.getElementById('logoModal');
     const logoImg = document.querySelector('.logo-img');
     const closeBtn = document.querySelector('.close-modal');
@@ -35,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
+
     const animateOnScroll = function() {
         const elements = document.querySelectorAll('.feature-card, .producto-card, .galeria-item, .card, .value-item');
         
@@ -61,6 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     initAnimations();
     window.addEventListener('scroll', animateOnScroll);
+    
     
     const contactForm = document.getElementById('contactForm');
     const formMensaje = document.getElementById('form-mensaje');
@@ -103,6 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 5000);
         });
     }
+
     
     const productosContainer = document.getElementById('productos-container');
     
@@ -180,7 +204,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { titulo: 'Equipo de trabajo Reyes del Calzado', imagen: './img/equipo.png' },
         { titulo: 'Evento de lanzamiento 2025', imagen: './img/evento.png' },
         { titulo: 'Proceso de empaque ecológico', imagen: './img/empaque.png' },
-        { titulo: 'Nueva colección', imagen: './img/coleccion.png' }
+        { titulo: 'Nueva colección primavera', imagen: './img/coleccion.png' }
     ];
     
     if (galeriaContainer) {
@@ -188,6 +212,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const item = document.createElement('div');
             item.className = 'galeria-item';
             item.style.backgroundImage = `url('${img.imagen}')`;
+            item.style.backgroundSize = 'cover';
+            item.style.backgroundPosition = 'center';
             item.innerHTML = `
                 <div class="galeria-overlay">
                     <h3>${img.titulo}</h3>

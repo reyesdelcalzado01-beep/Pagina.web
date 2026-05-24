@@ -33,20 +33,39 @@
 
 .galeria-overlay {
     position: absolute;
-    bottom: -100%;
+    bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    background: linear-gradient(transparent, rgba(0,0,0,0.85));
     color: white;
     padding: 1rem;
     transition: var(--transition);
 }
 
-.galeria-item:hover .galeria-overlay {
-    bottom: 0;
-}
-
 .galeria-overlay h3 {
     font-size: 1rem;
     margin: 0;
+}
+
+@media (max-width: 768px) {
+    .galeria-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .galeria-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .galeria-item {
+        height: 200px;
+    }
+    
+    .galeria-overlay {
+        padding: 0.8rem;
+    }
+    
+    .galeria-overlay h3 {
+        font-size: 0.9rem;
+    }
 }
