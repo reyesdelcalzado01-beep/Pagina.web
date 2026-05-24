@@ -1,0 +1,110 @@
+.about-hero {
+    background: linear-gradient(135deg, var(--primary), var(--dark));
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.about-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.history-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+}
+
+.history-section h2 {
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+
+.mission-vision {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: var(--secondary);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.values {
+    margin: 3rem 0;
+}
+
+.values h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.value-item {
+    background: linear-gradient(135deg, var(--secondary), var(--gold-light));
+    color: var(--primary);
+    padding: 1rem;
+    text-align: center;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.value-item:hover {
+    transform: scale(1.05);
+}
+
+.objectives {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.objectives h2 {
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+
+.objectives ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.objectives li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.objectives li::before {
+    content: "✓";
+    color: var(--secondary);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}

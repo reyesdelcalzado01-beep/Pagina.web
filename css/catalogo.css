@@ -1,0 +1,92 @@
+.catalogo-hero {
+    background: linear-gradient(135deg, var(--primary), var(--dark));
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.catalogo-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.producto-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.producto-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.producto-imagen {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.producto-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--secondary);
+    color: var(--primary);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.producto-info {
+    padding: 1.5rem;
+}
+
+.producto-info h3 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.producto-descripcion {
+    color: var(--gray);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.producto-precio {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--secondary);
+    margin-bottom: 0.5rem;
+}
+
+.producto-caracteristicas {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.producto-caracteristicas li {
+    font-size: 0.85rem;
+    padding: 0.2rem 0;
+    color: var(--gray);
+}
+
+.producto-caracteristicas li::before {
+    content: "✓";
+    color: var(--secondary);
+    margin-right: 0.5rem;
+}
